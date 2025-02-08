@@ -57,7 +57,7 @@ main {
     min-width: 328px;
     height: 496px;
 }
-.ozka {background-image: url('/img/ozka_0.png');}
+.ozka {background-image: url('./img/ozka_0.png');}
 
 
 .comic-t {

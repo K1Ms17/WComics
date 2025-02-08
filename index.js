@@ -10,11 +10,6 @@ let options = {
     mobileScrollSupport: true // disable content scrolling on mobile devices
 }
 
-let img1 = [
-    "/img/ozka/1.png",
-    "/img/ozka/2.png",
-    "/img/ozka/3.png"
-]
 let pageN = 0;
 
 const flip = new St.PageFlip(book, options);
