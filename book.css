@@ -1,0 +1,37 @@
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 75%;
+    margin: 0em auto;
+    background-color: #14171C;
+    overflow-y: hidden;
+}
+.stf__wrapper {
+    overflow-y: hidden;
+}
+.page {
+    width: auto;
+    height: 100%;
+    background-color: #14171C;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: auto;
+    height: 100%;
+}
+.page-img {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    gap: 1em;
+}

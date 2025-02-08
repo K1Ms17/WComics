@@ -1,0 +1,157 @@
+@import url('./font/Monocraft.otf');
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #878787a8 #00000000;
+    font-family: 'Monocraft';
+    overflow-x: hidden;
+}
+html{
+    background-color: #14171C;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #14171C;
+}
+.title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2em;
+    max-height: 100px;
+    height: 100px;
+    padding-top: 1rem;
+}
+.comic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    min-height: calc(100vh - 1000px);
+    background-color: #14171C;
+    justify-content: start;
+    align-items: start;
+    padding: 1em;
+}
+
+/* Адаптивный дизайн для одной карточки */
+.comic-list > .comic {
+    grid-column: span 1; /* Каждая карточка занимает одну колонку */
+}
+
+.comic-list:only-child {
+    grid-template-columns: 1fr; /* Если только одна карточка, занимает всю ширину */
+}
+
+.comic{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    padding-right: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(179, 95, 95, 0.2);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    min-width: 328px;
+    height: 496px;
+}
+.ozka {background-image: url('/img/ozka_0.png');}
+
+
+.comic-t {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+.comic-card-title {
+    font-size: 7em;
+    color: #ffffff;
+    display: block;
+}
+.comic-card-text {
+    display: table-cell;
+    vertical-align: bottom;
+    font-size: 1.5em;
+    color: #ffffff;
+    overflow-y: auto;
+    max-height: 50%;
+}
+.comic-card-img {
+    width: 100%;
+    height: 100%;
+}
+.comic-btn {
+    display: flex;
+    align-items: end;
+    width: 45%;
+}
+.select-btn {
+    height: 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 5px;
+    background-color: green;
+    text-transform: none;
+    color: #ffffff;
+    font-size: 15px;
+    overflow-y: hidden;
+}
+
+footer {
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width: 900px) {
+    .comic-list{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .comic{
+        flex-direction: column;
+        background-position: center;
+    }
+    .comic-t {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 1em;
+    }
+    .comic-btn {
+        width: 50%;
+        padding-right: 2em;
+        position: relative;
+        left: 50%;
+        font-size: 10px;
+
+    }
+    .comic-card-title {
+        font-size: 4em;
+    }
+    .comic-card-text {
+        font-size: 1.2em;
+    }
+    .select-btn {
+        font-size: 1.5em;
+    }
+    footer {
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #14171C;
+        margin: 0;
+        padding: 1em;
+        font-size: 7px;
+        text-align: center;
+        
+    }
+}
