@@ -7,7 +7,8 @@ let options = {
     minWidth: 315,
     maxWidth: 1000,
     maxShadowOpacity: 0.5, // Half shadow intensity
-    mobileScrollSupport: true // disable content scrolling on mobile devices
+    mobileScrollSupport: true,
+    swipeDistance: 30
 }
 
 let pageN = 0;
