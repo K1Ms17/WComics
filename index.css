@@ -125,13 +125,20 @@ footer {
     margin-bottom: 1em;
 }
 
+@media screen and (max-height: 800px) {
+    footer{
+        display: none;
+    }
+}
 @media screen and (max-width: 900px) {
     .comic-list{
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        align-items: center;
+        justify-content: center;
     }
     .comic{
         flex-direction: column;
         background-position: center;
+        padding: 0;
     }
     .comic-t {
         width: 100%;
@@ -168,6 +175,7 @@ footer {
         
     }
     .btn {
-        max-width:20px ;
+        font-size: 16px;
+        max-width:35px ;
     }
 }
