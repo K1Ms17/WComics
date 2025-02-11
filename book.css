@@ -1,15 +1,21 @@
 .book {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 75%;
+    justify-content: space-between;*/
     margin: 0em auto;
     background-color: #14171C;
-    overflow-y: hidden;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    display: none;
+    background-size: cover;
+    /* max-height: 75%; */
 }
 .stf__wrapper {
     overflow-y: hidden;
+}
+.stf__block {
+    overflow: hidden;
 }
 .page {
     width: auto;

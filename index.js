@@ -1,14 +1,19 @@
 let book = document.querySelector('.book');
 let options = {
-    width: 25, // base page width
-    height: 38, // base page height
+    width: 656, // base page width
+    height: 992, // base page height
+
     size: "stretch",
+    // set threshold values:
+    minWidth: 328,
+    maxWidth: 496,
+    minHeight: 330,
+    maxHeight: 218,
     flippingTime: 500,
-    minWidth: 315,
-    maxWidth: 1000,
     maxShadowOpacity: 0.5, // Half shadow intensity
     mobileScrollSupport: true,
-    swipeDistance: 30
+    swipeDistance: 30,
+    showCover: true
 }
 
 let pageN = 0;
