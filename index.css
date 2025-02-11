@@ -12,6 +12,12 @@
     scrollbar-color: #878787a8 #00000000;
     font-family: 'Monocraft', monospace;
     overflow-x: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 html{
     background-color: #14171C;
@@ -33,6 +39,7 @@ main {
     justify-content: center;
     margin: 2rem 0em;
     overflow: hidden;
+    text-decoration: none;
 }
 .comic-list {
     display: flex;
