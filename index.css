@@ -1,10 +1,16 @@
-@import url('./font/Monocraft.otf');
+@font-face {
+    font-family: 'Monocraft';
+    src: url('./font/Monocraft.woff2') format('woff2'),
+         url('./font/Monocraft.woff') format('woff');
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     scrollbar-width: thin;
     scrollbar-color: #878787a8 #00000000;
-    font-family: 'Monocraft';
+    font-family: 'Monocraft', monospace;
     overflow-x: hidden;
 }
 html{

@@ -25,7 +25,7 @@ flip.loadFromHTML(pages);
 let pageInput = document.querySelector('.page-input');
 
 // Обработчик ввода номера страницы
-pageInput.addEventListener('input', (e) => {
+pageInput.addEventListener('change', (e) => {
     let value = parseInt(e.target.value, 10);
     if (isNaN(value)) {
         e.target.value = ''; // Очищаем поле, если ввод не является числом
@@ -36,8 +36,8 @@ pageInput.addEventListener('input', (e) => {
     if (value < 1) {
         value = 1;
         pageN = value;
-    } else if (value > (flip.getPageCount())/2) {
-        value = flip.getPageCount()/2;
+    } else if (value > (flip.getPageCount())) {
+        value = flip.getPageCount();
         pageN = value;
     }
     else {
@@ -48,7 +48,7 @@ pageInput.addEventListener('input', (e) => {
     e.target.value = pageN;
 
     // Перелистываем на указанную страницу (индексация с 0)
-    flip.flip(value*2-1, 'top');
+    flip.flip(value-1, 'top');
 });
 
 // Обработчик кнопки "Назад"
@@ -68,7 +68,7 @@ prev.addEventListener('click', () => {
 let next = document.querySelector('.next');
 next.addEventListener('click', () => {
     flip.flipNext('bottom');
-    if (pageN+1 > flip.getPageCount()/2) {
+    if (pageN+1 > flip.getPageCount()) {
         return;
     }
     else {
@@ -83,6 +83,6 @@ pageN = flip.getCurrentPageIndex() + 1;
 
 flip.on('flip', (e) => {
     // alert(e.data);
-    pageInput.value = e.data/2 + 1;
-    pageN = e.data/2 + 1;
+    pageInput.value = e.data + 1;
+    pageN = e.data + 1;
 });
