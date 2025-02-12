@@ -1,3 +1,29 @@
+// Проверяем размер экрана
+function setHardPages() {
+    const pages = document.querySelectorAll('.book .page');
+    
+    // Если ширина экрана меньше 768px (мобильное устройство)
+    if (window.innerWidth < 768) {
+        pages.forEach(page => {
+            page.setAttribute('data-density', 'hard');
+        });
+        console.log('mobile');
+    } else {
+        // Убираем 'hard' на больших экранах
+        pages.forEach(page => {
+            page.removeAttribute('data-density');
+        });
+        // Добавляем жесткие только для первой и последней страницы
+        pages[0].setAttribute('data-density', 'hard');
+        pages[pages.length - 1].setAttribute('data-density', 'hard');
+    }
+}
+
+// Вызываем функцию при загрузке страницы
+setHardPages();
+// Вызываем при изменении размера окна
+window.addEventListener('resize', setHardPages);
+
 let book = document.querySelector('.book');
 let options = {
     width: 656, // base page width
