@@ -1,9 +1,12 @@
+let isMobile = window.innerWidth < 768;
+let book = document.querySelector('.book');
+
 // Проверяем размер экрана
 function setHardPages() {
     const pages = document.querySelectorAll('.book .page');
     
     // Если ширина экрана меньше 768px (мобильное устройство)
-    if (window.innerWidth < 768) {
+    if (isMobile) {
         pages.forEach(page => {
             page.setAttribute('data-density', 'hard');
         });
@@ -24,7 +27,7 @@ setHardPages();
 // Вызываем при изменении размера окна
 window.addEventListener('resize', setHardPages);
 
-let book = document.querySelector('.book');
+
 let options = {
     width: 656, // base page width
     height: 992, // base page height
@@ -37,9 +40,10 @@ let options = {
     maxHeight: 218,
     flippingTime: 500,
     maxShadowOpacity: 0.5, // Half shadow intensity
-    mobileScrollSupport: true,
-    swipeDistance: 30,
-    showCover: true
+    mobileScrollSupport: false,
+    swipeDistance: window.innerWidth < 768 ? 10000 : 30,
+    showCover: true,
+    useMouseEvents: window.innerWidth < 768 ? false : true
 }
 
 let pageN = 0;
