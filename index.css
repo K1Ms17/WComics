@@ -19,8 +19,9 @@
     -ms-user-select: none;
     user-select: none;
 }
-html{
+html, body{
     background-color: #14171C;
+    overflow-x: hidden;
 }
 
 main {
@@ -178,6 +179,9 @@ footer {
     }
 }
 @media screen and (max-width: 900px) {
+    .title{
+        margin: 0.5rem 0rem;
+    }
     .comic-list{
         align-items: center;
         justify-content: center;
